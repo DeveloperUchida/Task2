@@ -9,9 +9,9 @@ layout = [
 ]
 win = sg.Window("出生の秘密アプリ", layout, font=(None, 14), size=(320, 150))
 def execute():
-    eto = {"甲","乙","丙","丁","戊","己","庚","辛","壬","癸"}
-    in1 = int(["int1"])
-    etonum = (in1 -4) / 12
+    eto = ["子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥"]
+    in1 = int(v["in1"])
+    etonum = (in1 - 4) % 12
     txt = f"{in1}年は、{eto[etonum]}年です"
     win["txt"].update(txt)
 while True:
